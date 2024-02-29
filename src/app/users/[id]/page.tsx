@@ -38,12 +38,15 @@ export default async function User({ params }: Params) {
               const permissions = roleToPermissionsMapping[role.id];
               return (
                 <tr key={role.id}>
-                  <td>{role.name}</td>
+                  <td><Link href={`/roles/${role.id}`}>{role.name}</Link></td>
                   <td>
                     {permissions == null ? "(none)" : (
                       <ul>
                         {permissions.map((permission) => (
-                          <li key={permission.id}>{permission.name}</li>
+                          <li key={permission.id}>
+                            {permission.key}{" "}
+                            <span style={{ fontSize: "0.85rem" }}>({permission.name})</span>
+                          </li>
                         ))}
                       </ul>
                     )}

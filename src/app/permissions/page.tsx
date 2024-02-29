@@ -1,4 +1,4 @@
-export default function Permissions() {
+export default async function Permissions() {
   return (
     <main>
       <h1>Permissions</h1>

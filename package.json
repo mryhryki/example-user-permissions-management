@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "init:database": "mkdir -p ./temp/ && node -r esbuild-register ./src/task/init_database.ts"
+    "init:database": "rm -f ./temp/database.sqlite && mkdir -p ./temp/ && node -r esbuild-register ./src/task/init_database.ts"
   },
   "dependencies": {
     "next": "14.1.0",

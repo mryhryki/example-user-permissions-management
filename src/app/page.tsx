@@ -1,10 +1,6 @@
-import { openDatabase } from "@/util/database";
 import Link from "next/link";
 
 export default async function Home() {
-  const users = await getUsers()
-  console.debug('#####', JSON.stringify({ users }, null, 2));
-
   return (
     <main>
       <h1>example-user-permissions-management</h1>
@@ -15,9 +11,4 @@ export default async function Home() {
       </ul>
     </main>
   );
-}
-
-const getUsers = async() => {
-  const database = await openDatabase()
-  return database.get('SELECT * FROM users')
 }

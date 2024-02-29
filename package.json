@@ -1,0 +1,9 @@
+{
+  "name": "example-user-permissions-management",
+  "author": "mryhryki",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": ":"
+  }
+}

@@ -24,6 +24,7 @@ export default async function User({ params }: Params) {
   return (
     <main>
       <h1>User: {user.name}</h1>
+      <a href={`/api/users?id=${user.id}`}>Show JSON</a>
       <h2>Linked Roles</h2>
       <table>
         <thead>

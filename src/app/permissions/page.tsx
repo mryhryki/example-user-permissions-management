@@ -1,4 +1,5 @@
 import { openDatabase } from "@/util/database";
+import Link from "next/link";
 
 export default async function Permissions() {
   const permissions = await getPermissions();
@@ -39,6 +40,9 @@ export default async function Permissions() {
           </tr>
         </tbody>
       </table>
+      <p style={{ textAlign: "center", fontSize: "0.85rem" }}>
+        <Link href="/">Back to Home</Link>
+      </p>
     </main>
   );
 }

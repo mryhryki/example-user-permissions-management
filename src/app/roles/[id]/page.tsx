@@ -1,4 +1,5 @@
 import { openDatabase } from "@/util/database";
+import Link from "next/link";
 
 interface Params {
   params: {
@@ -57,6 +58,10 @@ export default async function User({ params }: Params) {
           </tr>
         </tbody>
       </table>
+
+      <p style={{ textAlign: "center", fontSize: "0.85rem" }}>
+        <Link href="/roles">Back to Roles</Link>
+      </p>
     </main>
   );
 }

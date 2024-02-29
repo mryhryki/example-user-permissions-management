@@ -3,7 +3,6 @@ import Link from "next/link";
 
 export default async function Users() {
   const users = await getUsers();
-  console.debug("#####", JSON.stringify({ users }, null, 2));
 
   return (
     <main>
@@ -15,6 +14,9 @@ export default async function Users() {
           </li>
         ))}
       </ul>
+      <p style={{ textAlign: "center", fontSize: "0.85rem" }}>
+        <Link href="/">Back to Home</Link>
+      </p>
     </main>
   );
 }

@@ -21,5 +21,5 @@ export default async function Users() {
 
 const getUsers = async () => {
   const database = await openDatabase();
-  return database.all("SELECT * FROM users");
+  return database.all("SELECT * FROM users;");
 };
